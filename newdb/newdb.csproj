@@ -91,6 +91,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Infrastructure\Commands\Command.cs" />
+    <Compile Include="Infrastructure\Commands\RelayCommand.cs" />
     <Compile Include="Models\DataEntityModel\Builds.cs">
       <DependentUpon>Model_DB.tt</DependentUpon>
     </Compile>
@@ -133,6 +135,7 @@
     <Compile Include="Models\DataEntityModel\Zakaz.cs">
       <DependentUpon>Model_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
   </ItemGroup>

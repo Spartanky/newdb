@@ -10,6 +10,9 @@
         Title="Авторизация" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
+    <Window.DataContext>
+        <vm:LoginViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -65,8 +68,10 @@
                     <Label Margin="63 25 0 0" Content="Здесь текст" Foreground="Red" Opacity="0.6"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                    <Button Width="100" Height="40" Content="Войти" Margin="130 0 0 0"  Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button  Width="100" Height="40" Content="Войти" Margin="130 0 0 0"  Style="{StaticResource MaterialDesignFlatButton}"/>
                 </StackPanel>
+                <Button Command="{Binding CloseAppCommand}" Width="100" Height="40" Content="Выйти" Margin="130 0 0 0"  Style="{StaticResource MaterialDesignFlatButton}"/>
+
 
             </StackPanel>
 
