@@ -8,7 +8,7 @@ namespace newdb.ViewModel
 {
      internal class MainWindowViewModel:ViewModel
     {
-        private string _Title = "sssdasds";
+        private string _Title;
         public string Title
         {
             get => _Title;

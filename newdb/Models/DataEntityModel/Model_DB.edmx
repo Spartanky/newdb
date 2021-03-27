@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Dateli_APP_newModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Builds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Build" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="crate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id_1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Zakaz" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Build" Type="nvarchar" MaxLength="100" />
+          <Property Name="Detal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Raz" Type="nvarchar" MaxLength="100" />
+          <Property Name="Time_one_detal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Time_all_detal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date_rec" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date_del" Type="nvarchar" MaxLength="100" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Data">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Zakaz" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Build" Type="nvarchar" MaxLength="100" />
+          <Property Name="Detal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Razov" Type="nvarchar" MaxLength="100" />
+          <Property Name="time_one_detal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="time_all_detal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Date_rec" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date_del" Type="nvarchar" MaxLength="100" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Detals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Detal" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="one_detal" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HistoryDates">
+          <Key>
+            <PropertyRef Name="Id_History" />
+          </Key>
+          <Property Name="Id_Date" Type="int" />
+          <Property Name="Id_History" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Zakaz" Type="nvarchar" MaxLength="100" />
+          <Property Name="Build" Type="nvarchar" MaxLength="100" />
+          <Property Name="Detal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="100" />
+          <Property Name="Raz" Type="nvarchar" MaxLength="100" />
+          <Property Name="Time_one_detal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Time_all_detal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Data_rec" Type="nvarchar" MaxLength="100" />
+          <Property Name="Data_del" Type="nvarchar" MaxLength="100" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="Data_update" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Keys_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="List_Builds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Build" Type="nvarchar" MaxLength="50" />
+          <Property Name="Detal" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zakaz" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Raz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Raz" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Zakaz" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Хранилище Dateli_APP_newModelContainer">
+          <EntitySet Name="Builds" EntityType="Self.Builds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="crate" EntityType="Self.crate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data" EntityType="Self.Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detals" EntityType="Self.Detals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HistoryDates" EntityType="Self.HistoryDates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Keys_Users" EntityType="Self.Keys_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="List_Builds" EntityType="Self.List_Builds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Raz" EntityType="Self.Raz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zakaz" EntityType="Self.Zakaz" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Dateli_APP_newModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Builds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Build" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="crate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id_1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Zakaz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Build" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Raz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Time_one_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Time_all_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date_rec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date_del" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Data">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Zakaz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Build" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Razov" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="time_one_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time_all_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date_rec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date_del" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Detals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Detal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="one_detal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HistoryDates">
+          <Key>
+            <PropertyRef Name="Id_History" />
+          </Key>
+          <Property Name="Id_Date" Type="Int32" />
+          <Property Name="Id_History" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Zakaz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Build" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Raz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Time_one_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Time_all_detal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Data_rec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Data_del" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Data_update" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Keys_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="List_Builds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Build" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Detal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Zakaz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Raz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Raz1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Zakaz1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entity_DB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Builds" EntityType="Self.Builds" />
+          <EntitySet Name="crate" EntityType="Self.crate" />
+          <EntitySet Name="Data" EntityType="Self.Data" />
+          <EntitySet Name="Detals" EntityType="Self.Detals" />
+          <EntitySet Name="HistoryDates" EntityType="Self.HistoryDates" />
+          <EntitySet Name="Keys_Users" EntityType="Self.Keys_Users" />
+          <EntitySet Name="List_Builds" EntityType="Self.List_Builds" />
+          <EntitySet Name="Raz" EntityType="Self.Raz" />
+          <EntitySet Name="Zakaz" EntityType="Self.Zakaz" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Dateli_APP_newModelContainer" CdmEntityContainer="Entity_DB">
+          <EntitySetMapping Name="Builds">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Builds">
+              <MappingFragment StoreEntitySet="Builds">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Build" ColumnName="Build" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="crate">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.crate">
+              <MappingFragment StoreEntitySet="crate">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_1" ColumnName="Id_1" />
+                <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+                <ScalarProperty Name="Build" ColumnName="Build" />
+                <ScalarProperty Name="Detal" ColumnName="Detal" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Raz" ColumnName="Raz" />
+                <ScalarProperty Name="Time_one_detal" ColumnName="Time_one_detal" />
+                <ScalarProperty Name="Time_all_detal" ColumnName="Time_all_detal" />
+                <ScalarProperty Name="Date_rec" ColumnName="Date_rec" />
+                <ScalarProperty Name="Date_del" ColumnName="Date_del" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Data">
+              <MappingFragment StoreEntitySet="Data">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+                <ScalarProperty Name="Build" ColumnName="Build" />
+                <ScalarProperty Name="Detal" ColumnName="Detal" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Razov" ColumnName="Razov" />
+                <ScalarProperty Name="time_one_detal" ColumnName="time_one_detal" />
+                <ScalarProperty Name="time_all_detal" ColumnName="time_all_detal" />
+                <ScalarProperty Name="Date_rec" ColumnName="Date_rec" />
+                <ScalarProperty Name="Date_del" ColumnName="Date_del" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detals">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Detals">
+              <MappingFragment StoreEntitySet="Detals">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Detal" ColumnName="Detal" />
+                <ScalarProperty Name="one_detal" ColumnName="one_detal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HistoryDates">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.HistoryDates">
+              <MappingFragment StoreEntitySet="HistoryDates">
+                <ScalarProperty Name="Id_Date" ColumnName="Id_Date" />
+                <ScalarProperty Name="Id_History" ColumnName="Id_History" />
+                <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+                <ScalarProperty Name="Build" ColumnName="Build" />
+                <ScalarProperty Name="Detal" ColumnName="Detal" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Raz" ColumnName="Raz" />
+                <ScalarProperty Name="Time_one_detal" ColumnName="Time_one_detal" />
+                <ScalarProperty Name="Time_all_detal" ColumnName="Time_all_detal" />
+                <ScalarProperty Name="Data_rec" ColumnName="Data_rec" />
+                <ScalarProperty Name="Data_del" ColumnName="Data_del" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Data_update" ColumnName="Data_update" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Keys_Users">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Keys_Users">
+              <MappingFragment StoreEntitySet="Keys_Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="List_Builds">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.List_Builds">
+              <MappingFragment StoreEntitySet="List_Builds">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Build" ColumnName="Build" />
+                <ScalarProperty Name="Detal" ColumnName="Detal" />
+                <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Raz">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Raz">
+              <MappingFragment StoreEntitySet="Raz">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Raz1" ColumnName="Raz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zakaz">
+            <EntityTypeMapping TypeName="Dateli_APP_newModel.Zakaz">
+              <MappingFragment StoreEntitySet="Zakaz">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Zakaz1" ColumnName="Zakaz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
