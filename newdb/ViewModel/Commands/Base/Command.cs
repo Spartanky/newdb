@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using System;
 
-namespace newdb.Infrastructure.Commands
+namespace newdb.ViewModel.Commands.Base
 {
     internal abstract class Command : ICommand
     {

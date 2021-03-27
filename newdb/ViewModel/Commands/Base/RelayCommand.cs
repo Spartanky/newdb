@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace newdb.Infrastructure.Commands
-{
+namespace newdb.ViewModel.Commands.Base
+{ 
     internal class RelayCommand : Command
     {
         private readonly Action<object> _Execute;
