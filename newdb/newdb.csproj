@@ -61,7 +61,7 @@
     </Compile>
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
-    <Compile Include="View\MainWindow.xaml.cs">
+    <Compile Include="View\Window\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -95,7 +95,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\MainWindow.xaml">
+    <Page Include="View\Window\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
