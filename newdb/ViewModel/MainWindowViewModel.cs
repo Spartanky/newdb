@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace newdb.ViewModel
 {
-    class MainWindowViewModel
+     internal class MainWindowViewModel:ViewModel
     {
+        private string _Title = "sssdasds";
+        public string Title
+        {
+            get => _Title;
+            set => Set(ref _Title, value);
+        }
     }
 }
