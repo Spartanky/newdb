@@ -91,6 +91,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Base\BaseModelEntity.cs" />
+    <Compile Include="Models\Base\EventData.cs" />
     <Compile Include="ViewModel\Commands\Base\Command.cs" />
     <Compile Include="ViewModel\Commands\Base\RelayCommand.cs" />
     <Compile Include="Models\DataEntityModel\Builds.cs">
@@ -136,9 +138,17 @@
       <DependentUpon>Model_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Commands\CloseAppCommand.cs" />
+    <Compile Include="ViewModel\Commands\OpenMainWindow.cs" />
+    <Compile Include="ViewModel\DataOutput\DataOutViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="View\WindowView\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowView\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -187,11 +197,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\Windows\Login.xaml">
+    <Page Include="View\WindowView\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\MainWindow.xaml">
+    <Page Include="View\WindowView\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
