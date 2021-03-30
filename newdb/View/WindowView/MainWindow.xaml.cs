@@ -1,4 +1,6 @@
-﻿using System;
+﻿using newdb.Models.Base;
+using newdb.Models.DataEntityModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

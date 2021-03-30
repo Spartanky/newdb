@@ -227,10 +227,10 @@
       <DependentUpon>Model_DB.edmx</DependentUpon>
       <LastGenOutput>Model_DB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resourse\images\Main.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\" />
-    <Folder Include="Resourse\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
